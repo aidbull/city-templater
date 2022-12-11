@@ -2201,15 +2201,15 @@ outline: none;
             </div>
         </div>
         <script>t_onReady(function () {
-            t_onFuncLoad('t396_init', function () {
-                t396_init('520756744');
-            });
-        });</script><!-- /T396 --></div>
+                t_onFuncLoad('t396_init', function () {
+                    t396_init('520756744');
+                });
+            });</script><!-- /T396 --></div>
     <div id="rec520754572" class="r t-rec t-rec_pt_45 t-rec_pb_165" style="padding-top:45px;padding-bottom:165px; "
          data-animationappear="off" data-record-type="853"><!-- t853 -->
         <div class="t853">
             <div class="t853__scroll-icon-wrapper"
-                 style="mix-blend-mode: multiply;"> <?xml version="1.0" encoding="UTF-8"?>
+                 style="mix-blend-mode: multiply;">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 300" height="42" width="42">
                     <rect class="tooltip-horizontal-scroll-icon_card" x="480" width="200" height="200" rx="5"
                           fill="rgba(190,190,190,0.3)"></rect>

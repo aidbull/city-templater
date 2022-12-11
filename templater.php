@@ -11,11 +11,8 @@ function renderTemplate($tmp, $vars = array()) {
 }
 
 // echo render('index', array('cityNameRus' => $cityNameRus));
-
-
 /* 'moscow' => 'Москва'
 СКЛОНЕНИЯ!!! БЛЯЯЯЯ
-
 2 предложных один именительный Нижний Новгород в Нижнем Новгороде
 */
 $cityNamesRus = ["Москва",
@@ -190,7 +187,6 @@ $cityNamesRus = ["Москва",
 "Ачинск",
 "Тобольск",
 "Ноябрьск"];
-
 $cityNamesLatin = ["Moskva",
     "Sankt-Peterburg",
     "Novosibirsk",
@@ -366,7 +362,13 @@ $cityNamesLatin = ["Moskva",
 
 foreach ($cityNamesRus as $idx => $russianName) {
     $latinName = $cityNamesLatin[$idx];
-    $pageRender =  renderTemplate('index', array('cityNameRus' => $russianName));
+    $pageRender = renderTemplate('index', array('cityNameRus' => $russianName));
+
+    /* Для отладки
+    echo $pageRender;
+    var_dump($pageRender);
+    die();
+    */
 
     file_put_contents($latinName . ".php", $pageRender);
 }
