@@ -16,6 +16,8 @@ namespace morphos;
 //    }
 //}
 
+use morphos\Russian\GeographicalNamesInflection;
+
 set_include_path(get_include_path()
     . PATH_SEPARATOR . '../src'
     . PATH_SEPARATOR . '../src/Russian'
@@ -30,10 +32,10 @@ spl_autoload_register(function ($className) {
 // RENDER FUNCTION
 function renderTemplate($tmp, $vars = array())
 {
-    if (file_exists('templates/' . $tmp . '.tpl.php')) {
+    if (file_exists('../templates/' . $tmp . '.tpl.php')) {
         ob_start();
         extract($vars);
-        require 'templates/' . $tmp . '.tpl.php';
+        require '../templates/' . $tmp . '.tpl.php';
         return ob_get_clean();
     }
 }
@@ -402,5 +404,5 @@ foreach ($cityNamesRus as $idx => $russianName) {
     die();
     */
 
-//    file_put_contents(strtolower($latinName) . ".php", $pageRender);
+    file_put_contents(strtolower($latinName) . ".php", $pageRender);
 }

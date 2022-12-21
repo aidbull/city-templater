@@ -1127,7 +1127,7 @@ outline: none;
                      data-field-heightunits-value="" data-field-widthunits-value="px"
                 >
                     <div class='tn-atom' field='tn_text_1669549655229'>Производство композитной арматуры <br>и садовых
-                        опор в г. <?= $cityNameRusRod; ?>
+                        опор в <?= $cityNameRusRod; ?>
                     </div>
                 </div>
                 <div class='t396__elem tn-elem tn-elem__5196337571669549689215' data-elem-id='1669549689215'
@@ -1592,7 +1592,7 @@ outline: none;
                      data-field-heightunits-value="" data-field-widthunits-value="px"
                 >
                     <div class='tn-atom' field='tn_text_1470210011265'>это индивидуальный подход, качественная
-                        продукция, честная цена. Наши производственные мощности находятся в г. <?= $cityNameRusRod; ?>,
+                        продукция, честная цена. Наши производственные мощности находятся в <?= $cityNameRusRod; ?>,
                         а отгрузка
                         товара осуществляется 24/7
                     </div>
