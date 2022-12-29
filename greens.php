@@ -1,3 +1,14 @@
+<?php
+
+include "templates/functions.php";
+
+if (!isset($_SESSION['cityNameRus'])) {
+    $cityName = "Нижнем Новгороде";
+} else {
+    $cityName = $_SESSION['cityNameRus'];
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,13 +16,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/><!--metatextblock--><title>Садовые опоры для
         саженцев</title>
-    <meta property="og:url" content="http://komposit69.tilda.ws/sajenci"/>
+    <meta property="og:url" content="http://composite-69.ru/sajenci"/>
     <meta property="og:title" content="Садовые опоры для саженцев"/>
     <meta property="og:description" content=""/>
     <meta property="og:type" content="website"/>
     <meta property="og:image"
           content="https://static.tildacdn.com/tild6330-6561-4136-b765-363634326134/__2022-11-27__174422.png"/>
-    <link rel="canonical" href="http://komposit69.tilda.ws/sajenci"><!--/metatextblock-->
+    <link rel="canonical" href="http://composite-69.ru/sajenci"><!--/metatextblock-->
     <meta name="format-detection" content="telephone=no"/>
     <meta http-equiv="x-dns-prefetch-control" content="on">
     <link rel="dns-prefetch" href="https://ws.tildacdn.com">
@@ -610,7 +621,7 @@
                                                 <li class="t-menusub__list-item t-name t-name_xs" role="none"><a
                                                             class="t-menusub__link-item t-name t-name_xs"
                                                             role="menuitem"
-                                                            href="/page32214529.html"
+                                                            href="/khlyst.php"
                                                             style="color:#ffffff;font-weight:400;font-family:'GraphikTT';"
                                                             data-menu-item-number="3">Хлыст</a></li>
                                                 <li class="t-menusub__list-item t-name t-name_xs" role="none"><a
@@ -622,7 +633,7 @@
                                                 <li class="t-menusub__list-item t-name t-name_xs" role="none"><a
                                                             class="t-menusub__link-item t-name t-name_xs"
                                                             role="menuitem"
-                                                            href="/page32214524.html"
+                                                            href="/dugi.php"
                                                             style="color:#ffffff;font-weight:400;font-family:'GraphikTT';"
                                                             data-menu-item-number="3">Для парника</a></li>
                                             </ul>
@@ -1733,7 +1744,8 @@
                          data-field-left-res-640-value="359" data-field-top-res-960-value="190"
                          data-field-left-res-960-value="630"
                     >
-                        <div class='tn-atom' field='tn_text_1669559793994'>г. Нижний Новгород, <br>ул. Правды 23 167728
+                        <div class='tn-atom' field='tn_text_1669559793994'>г. <? getFooter($cityName); ?>, <br>ул.
+                            Правды 23 167728
                         </div>
                     </div>
                     <div class='t396__elem tn-elem tn-elem__5207608741669559861605' data-elem-id='1669559861605'
