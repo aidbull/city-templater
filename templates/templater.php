@@ -2,6 +2,8 @@
 
 namespace morphos;
 
+include "functions.php";
+
 //function recursiveCrazyImport($file)
 //{
 //    try {
@@ -16,6 +18,8 @@ namespace morphos;
 //    }
 //}
 
+use morphos\Russian\GeographicalNamesInflection;
+
 set_include_path(get_include_path()
     . PATH_SEPARATOR . '../src'
     . PATH_SEPARATOR . '../src/Russian'
@@ -25,18 +29,6 @@ spl_autoload_register(function ($className) {
     $t = str_replace('morphos\\', "", $className);
     require_once $t . '.php';
 });
-
-
-// RENDER FUNCTION
-function renderTemplate($tmp, $vars = array())
-{
-    if (file_exists('templates/' . $tmp . '.tpl.php')) {
-        ob_start();
-        extract($vars);
-        require 'templates/' . $tmp . '.tpl.php';
-        return ob_get_clean();
-    }
-}
 
 // echo render('index', array('cityNameRus' => $cityNameRus));
 /* 'moscow' => 'Москва'
@@ -396,11 +388,24 @@ foreach ($cityNamesRus as $idx => $russianName) {
         'cityNameRusRod' => $rodPod
     ));
 
+    $cityPageName = strtolower($latinName) . ".php";
+
     /* Для отладки
     echo $pageRender;
     var_dump($pageRender);
     die();
     */
 
-//    file_put_contents(strtolower($latinName) . ".php", $pageRender);
+    $head = "
+<?
+    session_start();
+    
+    \$_SESSION['cityNameRus'] = \"" . $russianName . "\";
+    \$_SESSION['cityNameRusRod'] = \"" . $rodPod . "\";
+
+?>
+    ";
+
+    file_put_contents("../citypages/" . $cityPageName, $head . $pageRender);
+    die();
 }
